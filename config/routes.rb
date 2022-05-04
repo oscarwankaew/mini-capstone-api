@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/product", controller: "products", action: "product_list"
+  get "/bicycle", controller: "products", action: "bicycle_listing"
+  get "/tv", controller: "products", action: "TV_listing"
+  get "/desk", controller: "products", action: "desk_listing"
 end
