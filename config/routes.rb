@@ -6,6 +6,11 @@ Rails.application.routes.draw do
 
   get "/products" => "products#index"
   get "/products/:id" => "products#show"
+  post "/products" =>"products#create"
+  put "/products/:id" => "products#update"
+  patch "/products/:id" => "products#update"
+
+  
   # get "/products", controller: "products", action: "index"
   # get "/products/:id", controller: "products", action: "show"
   # get "/bicycle", controller: "products", action: "bicycle_listing"

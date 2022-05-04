@@ -1,0 +1,31 @@
+### POST create
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Basketball",
+    "price": 9.99,
+    "image_url": "",
+    "description": "bouncy"
+}
+
+### GET index
+
+GET http://localhost:3000/products
+
+
+### GET show
+
+GET http://localhost:3000/products/4
+
+### PATCH update
+
+PATCH http://localhost:3000/products/6
+Content-Type: application/json
+
+{
+    "name": "Harry potter book III",
+    "price": 3000.99,
+    "description": "last copy!"
+}
