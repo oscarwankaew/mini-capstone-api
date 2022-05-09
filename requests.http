@@ -17,15 +17,18 @@ GET http://localhost:3000/products
 
 ### GET show
 
-GET http://localhost:3000/products/4
+GET http://localhost:3000/products/2
 
 ### PATCH update
 
-PATCH http://localhost:3000/products/6
+PATCH http://localhost:3000/products/7
 Content-Type: application/json
 
 {
-    "name": "Harry potter book III",
-    "price": 3000.99,
-    "description": "last copy!"
+    "name": "Socks",
+    "price": 5.99,
+    "description": "only comes one side!"
 }
+
+### DELETE destory
+DELETE http://localhost:3000/products/7

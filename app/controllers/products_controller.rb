@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     
     def show
         listed_product = Product.find_by(id: params["id"])
-        render json: listed_product.as_json
+        render json: listed_product.as_json(methods: [:is_discounted?, :tax, :total, :friendly_created_at, :friendly_updated_at])
     end
 
     def create
@@ -32,6 +32,13 @@ class ProductsController < ApplicationController
         product.save
 
         render json: product.as_json
+    end
+
+    def destroy
+        product_id = params["id"]
+        product = Product.find_by(id: product_id)
+        product.destroy
+        render json: {message: "Deleted the product"}
     end
 
 end
