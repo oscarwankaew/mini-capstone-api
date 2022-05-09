@@ -9,7 +9,6 @@ class Product < ApplicationRecord
 
     def total
         total = price + tax
-        return "$#{total} dollars."
     end
 
     def friendly_created_at

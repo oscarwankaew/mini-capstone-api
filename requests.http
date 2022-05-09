@@ -1,6 +1,6 @@
 ### POST create
 
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
@@ -12,16 +12,16 @@ Content-Type: application/json
 
 ### GET index
 
-GET http://localhost:3000/products
+GET http://localhost:3000/products.json
 
 
 ### GET show
 
-GET http://localhost:3000/products/2
+GET http://localhost:3000/products/2.json
 
 ### PATCH update
 
-PATCH http://localhost:3000/products/7
+PATCH http://localhost:3000/products/10.json
 Content-Type: application/json
 
 {
