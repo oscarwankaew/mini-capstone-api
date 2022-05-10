@@ -1,14 +1,1 @@
-{
-  id: @product.id,
-  name: @product.name,
-  price: @product.price,
-  image_url: @product.image_url,
-  description: @product.description,
-  is_discounted?: @product.is_discounted?,
-  tax: @product.tax,
-  total: @product.total,
-  friendly_created_at: @product.friendly_created_at,
-  friendly_updated_at: @product.friendly_updated_at,
-  created_at: @product.created_at,
-  updated_at: @product.updated_at
-}
+render "products/products", product: @product
