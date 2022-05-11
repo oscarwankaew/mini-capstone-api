@@ -4,7 +4,7 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-    "name": "Basketball",
+    "name": "",
     "price": 9.99,
     "image_url": "",
     "description": "bouncy"
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 {
     "name": "Socks",
-    "price": 5.99,
+    "price": -5.99,
     "description": "only comes one side!"
 }
 
