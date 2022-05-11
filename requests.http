@@ -4,10 +4,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-    "name": "",
-    "price": 9.99,
+    "name": "orange juice",
+    "price": 5.99,
     "image_url": "",
-    "description": "bouncy"
+    "description": "very fresh and replenishing"
 }
 
 ### GET index
