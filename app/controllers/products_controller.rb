@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
+      inventory: params["inventory"],
+      supplier_id: params["supplier_id"],
     )
     if product.save
       @product = product
@@ -32,6 +34,8 @@ class ProductsController < ApplicationController
     product.price = params["price"] || product.price
     product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
+    product.inventory = params["inventory"] || product.inventory
+    product.supplier_id = params["supplier_id"] || product.supplier_id
 
     if product.save
       @product = product

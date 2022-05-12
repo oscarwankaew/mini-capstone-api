@@ -7,7 +7,9 @@ Content-Type: application/json
     "name": "orange juice",
     "price": 5.99,
     "image_url": "",
-    "description": "very fresh and replenishing"
+    "description": "very fresh and replenishing",
+    "inventory": 1,
+    "supplier_id": 1
 }
 
 ### GET index
