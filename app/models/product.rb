@@ -17,11 +17,7 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  def friendly_created_at
-    return created_at.strftime("%e %b %Y %H:%M:%S%p")
-  end
-
-  def friendly_updated_at
-    return updated_at.strftime("%e %b %Y %H:%M:%S%p")
+  def supplier
+    Supplier.find_by(id: supplier_id)
   end
 end

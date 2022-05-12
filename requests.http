@@ -34,3 +34,38 @@ Content-Type: application/json
 
 ### DELETE destory
 DELETE http://localhost:3000/products/7
+
+##############################################
+
+### Supplier index
+
+get http://localhost:3000/suppliers
+
+### Supplier show
+
+get http://localhost:3000/suppliers/1
+
+### Supplier create
+
+post http://localhost:3000/suppliers
+Content-Type: application/json
+
+{
+    "name": "",
+    "email": "",
+    "phone_number": "",
+    "supplier_id": 
+}
+
+### Supplier update
+
+patch http://localhost:3000/suppliers/1
+Content-Type: application/json
+
+{
+
+}
+
+### Supplier destroy
+
+delete http://localhost:3000/suppliers/1
