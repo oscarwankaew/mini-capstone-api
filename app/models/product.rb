@@ -4,6 +4,8 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
+  belongs_to :supplier
+  has_many :images
 
   def is_discounted?
     price < 10
@@ -17,7 +19,11 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+
+  # def images
+  #   Image.where(product_id: id)
+  # end
 end

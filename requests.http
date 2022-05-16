@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### DELETE destory
-DELETE http://localhost:3000/products/7
+DELETE http://localhost:3000/products/12
 
 ##############################################
 
@@ -69,3 +69,15 @@ Content-Type: application/json
 ### Supplier destroy
 
 delete http://localhost:3000/suppliers/1
+
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
