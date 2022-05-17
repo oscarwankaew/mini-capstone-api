@@ -37,7 +37,7 @@ Content-Type: application/json
 ### DELETE destory
 DELETE http://localhost:3000/products/12
 
----------------------------------------------------
+#--------------------------------------------------------------------
 
 ### Supplier index
 
@@ -72,20 +72,20 @@ Content-Type: application/json
 
 delete http://localhost:3000/suppliers/1
 
---------------------------------------------------------
+#-------------------------------------------------------------------
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Test name1",
+  "email": "test1@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
 
---------------------------------------------------------
+#--------------------------------------------------------------------
 
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
@@ -95,4 +95,30 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+#--------------------------------------------------------------------
+
+### ORDER create
+post http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE2NDF9.ilAG65roXdKXtAlmH6Ju2YifOuTOuYNBs3jeJ_qlsIM
+
+{
+  
+  "product_id": 8,
+  "quantity": 2
+
+                                      
+}             
+     
+### ORDER index
+get http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTY1NzR9.2k5FZwKFc4s3wUZVu_RP4of3UoURlKYbdOHJZBFrWjs
+
+### ORDER show
+get http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTY1NzR9.2k5FZwKFc4s3wUZVu_RP4of3UoURlKYbdOHJZBFrWjs
+
+
+
 

@@ -18,4 +18,10 @@ Rails.application.routes.draw do
 
   ## SESSIONS routes
   post "/sessions" => "sessions#create"
+
+  ## ORDERS routes
+  post "/orders" => "orders#create"
+  get "/orders" => "orders#index"
+  get "/orders/:id" => "orders#show"
+  delete "/orders/:id" => "orders#destroy"
 end
