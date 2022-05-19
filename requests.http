@@ -1,3 +1,8 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI5NzY5MTh9.AKDjEea7u6kXYYSGSzvJxm6GZYlkj06i_RjIuPFTzi0
+
+
+####----------------------------------------------------------------
+
 ### POST create
 
 POST http://localhost:3000/products.json
@@ -16,11 +21,13 @@ Content-Type: application/json
 
 GET http://localhost:3000/products.json
 
+GET http://localhost:3000/products.json?category=Sport
+
 
 ### GET show
 
 GET http://localhost:3000/products/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+
 
 
 ### PATCH update
@@ -101,7 +108,7 @@ Content-Type: application/json
 ### ORDER create
 post http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE2NDF9.ilAG65roXdKXtAlmH6Ju2YifOuTOuYNBs3jeJ_qlsIM
+Authorization: Bearer {{jwt}}
 
 {
   
@@ -113,11 +120,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE2N
      
 ### ORDER index
 get http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTY1NzR9.2k5FZwKFc4s3wUZVu_RP4of3UoURlKYbdOHJZBFrWjs
+Authorization: Bearer {{jwt}}
 
 ### ORDER show
 get http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTY1NzR9.2k5FZwKFc4s3wUZVu_RP4of3UoURlKYbdOHJZBFrWjs
+Authorization: Bearer {{jwt}}
+
+### ORDER destroy
+delete http://localhost:3000/orders/1
 
 
 

@@ -9,6 +9,7 @@
   inventory: product.inventory,
   supplier: product.supplier,
   images: product.images,
+  categories: product.categories,
   created_at: product.created_at,
   updated_at: product.updated_at,
 }

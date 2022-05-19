@@ -28,4 +28,10 @@ class OrdersController < ApplicationController
     @order = current_user.orders.find_by(id: params[:id])
     render template: "orders/show"
   end
+
+  def destroy
+    order = current_user.orders.find_by(id: params[:id])
+    order.destroy
+    render json: { massege: "Successfully remove selected item." }
+  end
 end
