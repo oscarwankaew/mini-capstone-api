@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI5NzY5MTh9.AKDjEea7u6kXYYSGSzvJxm6GZYlkj06i_RjIuPFTzi0
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNzE0NDF9.vO1t_CGBZq8rPArXdykz351tYSVV0nfwN7TxpDKgjkQ
 
 
 ####----------------------------------------------------------------
@@ -130,5 +130,19 @@ Authorization: Bearer {{jwt}}
 delete http://localhost:3000/orders/1
 
 
+### -------------------------------------------------------
 
+### CartedProduct create
 
+POST http://localhost:3000/carted_products
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  
+}
+
+### index
+
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
